@@ -1,19 +1,19 @@
 import turtle
 
-turtle.tracer(False)  # Turn off animation for max speed
+turtle.tracer(False) #Turns the animation off to speed it up a bunch.
 t = turtle.Turtle()
 t.hideturtle()
 t.speed(0)
 t.width(4)
 
-turns = [0, 1]
+turns = [0, 1] #You can mess with turns and depth to investigate how it behaves.
 depth = 12
 
 def main(lst):
     for i in range(depth):
         turnAppender(lst)
     fractalDraw(lst)
-    turtle.update()  # Update once at the end
+    turtle.update() #Update it when the process ends since there is no animation.
 
 def turnAppender(lst):
     l = len(lst)
@@ -30,5 +30,6 @@ def fractalDraw(lst):
         t.forward(8)
 
 main(turns)
+
 
 turtle.exitonclick()
